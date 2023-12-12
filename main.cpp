@@ -1,22 +1,16 @@
 #include <iostream>
-#include "encrypt.h"
 
-class Test : public aje::Encrypt
-{
-    public:
-        Test() : Encrypt("bonjour") {};
-
-        void decode() override
-        {
-
-        }
-
-        void encode() override{}
-};
+#include "vigenere.h"
 
 int main(int argc, char* argv[])
 {
-    Test test;
+    aje::Vigenere test("Hell0 WOrld !", {3, 1, 5, 2});
+
+    test.encode();
+    test.decode();
+
+    std::cout << "cipher : " << test.cipher() << std::endl;
+    std::cout << "plain : " << test.plain() << std::endl;
 
     return 0;
 }
