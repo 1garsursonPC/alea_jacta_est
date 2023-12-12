@@ -1,22 +1,15 @@
 #include <iostream>
+
 #include "encrypt.h"
-
-class Test : public aje::Encrypt
-{
-    public:
-        Test() : Encrypt("bonjour") {};
-
-        void decode() override
-        {
-
-        }
-
-        void encode() override{}
-};
 
 int main(int argc, char* argv[])
 {
-    Test test;
-
+    aje::BasicEncrypt basic("bonjour");
+    std::string cipher;
+    basic >> cipher;
+    std::cout << cipher << std::endl;
+    basic << "hello";
+    basic >> cipher;
+    std::cout << cipher << std::endl;
     return 0;
 }
