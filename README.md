@@ -25,7 +25,7 @@ Ce TP est donc adapté aux étudiants ayant un niveau intermédiaire.
 **Lire attentivement les informations suivantes et bien comprendre le problème avant de commencer à écrire la moindre ligne de code.**
 
 
-Le but de ce TP est d'implémenter plusieurs algorithmes de chiffrement de données. Pour cela, un [document](cryptographie.pdf) expliquant plusieurs techniques de cryptographie vous est fourni. Il est vital de prendre le temps nécessaire pour le lire et comprendre les techniques présentées.
+Le but de ce TP est d'implémenter plusieurs algorithmes de chiffrement de données. Pour cela, un [document](https://github.com/dginhac/esirem-itc313/blob/master/TP/2023-2024/cryptographie.pdf) expliquant plusieurs techniques de cryptographie vous est fourni. Il est vital de prendre le temps nécessaire pour le lire et comprendre les techniques présentées.
 
 L'objectif principal de ce TP est d'utiliser de manière efficace les compétences que vous avez acquises dans ce module pour résoudre des problèmes de complexité croissante. De plus, ce TP vous permettra de mettre en oeuvre la notion d'héritage de classes. 
 
