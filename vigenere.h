@@ -12,6 +12,7 @@ namespace aje
     {
     public:
         Vigenere(const std::string& plain, const std::vector<unsigned>& key) : Encrypt(plain), _key(key) {}
+        Vigenere(const std::string& plain, const std::string& key);
 
         void encode() override;
         void decode() override;

@@ -4,7 +4,7 @@
 
 int main(int argc, char* argv[])
 {
-    aje::Vigenere test("Hell0 WOrld !", {3, 1, 5, 2});
+    aje::Vigenere test("Hello World !", "turing");
 
     test.encode();
     test.decode();
