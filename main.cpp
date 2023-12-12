@@ -1,15 +1,18 @@
 #include <iostream>
 
-#include "encrypt.h"
+#include "caesar.h"
 
 int main(int argc, char* argv[])
 {
-    aje::BasicEncrypt basic("bonjour");
-    std::string cipher;
-    basic >> cipher;
-    std::cout << cipher << std::endl;
-    basic << "hello";
-    basic >> cipher;
-    std::cout << cipher << std::endl;
+    std::string data;
+    aje::read("phrase.txt", data); 
+
+    aje::Caesar caesar(data, 3);
+
+    std::cout << caesar.cipher();
+
+    caesar.encode();
+    std::cout << caesar.plain();
+
     return 0;
 }

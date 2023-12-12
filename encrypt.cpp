@@ -4,6 +4,7 @@
 #include <ostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 
 namespace aje
 {
@@ -27,7 +28,10 @@ namespace aje
     bool read(const std::string& filename, std::string& buffer)
     {
         std::ifstream in(filename, std::ifstream::in);
-        in >> buffer;
+        std::stringstream stream;
+        stream << in.rdbuf();
+        buffer = stream.str();
+
         in.close();
         return true;
     }

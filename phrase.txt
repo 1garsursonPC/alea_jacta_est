@@ -1,0 +1,1 @@
+La classe Caesar implémente le chiffrement de César qui consiste à effectuer un décalage de 3 positions vers la droite de toute lettre du message à encoder (pour des raisons de simplicité, on considérera dans un premier temps que les messages sont constitués uniquement de lettres minuscules, tous les autres caractères étant ignorés)
