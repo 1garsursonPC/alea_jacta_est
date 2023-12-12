@@ -9,9 +9,11 @@ int main(int argc, char* argv[])
 
     aje::Caesar caesar(data, 3);
 
-    std::cout << caesar.cipher();
+    std::cout << "Encodé: " << std::endl;
+    std::cout << caesar.cipher() << std::endl;
 
-    caesar.encode();
+    std::cout << "Décodé: " << std::endl;
+    caesar.decode();
     std::cout << caesar.plain();
 
     return 0;

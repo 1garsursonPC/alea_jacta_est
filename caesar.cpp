@@ -1,4 +1,7 @@
 #include "caesar.h"
+#include <iostream>
+
+#define BEG_ASCII 97
 
 namespace aje
 {
@@ -12,7 +15,16 @@ namespace aje
         _cipher = "";
         for(auto c : _plain)
         {
-            _cipher += static_cast<char>(static_cast<int>(c) + _shift);
+            int ord = static_cast<int>(c) - BEG_ASCII;
+            char letter = c;
+
+            if(ord >= 0 && ord <= 26)
+            {
+                int index = (ord + _shift) % 26;
+                letter = static_cast<char>(index + BEG_ASCII);
+            }
+            
+            _cipher += letter;
         }
     }
 
@@ -21,7 +33,19 @@ namespace aje
         _plain = "";
         for(auto c : _cipher)
         {
-            _plain += static_cast<char>(static_cast<int>(c) - _shift);
-        } 
+            int ord = static_cast<int>(c) - BEG_ASCII;
+            char letter = c;
+
+            if(ord >= 0 && ord <= 26)
+            {
+                int index = (ord - _shift) % 26;
+                if(index < 0)
+                    index += 26;
+
+                letter = static_cast<char>(index + BEG_ASCII);
+            }
+            
+            _plain += letter;
+        }
     }
 }
