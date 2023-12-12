@@ -48,4 +48,23 @@ namespace aje
             _plain += letter;
         }
     }
+
+    Caesar2::Caesar2(const std::string& plain, int shift) : Encrypt(plain), _shift(shift)
+    {
+        encode();
+    }
+
+    void Caesar2::encode()
+    {
+        _cipher = "";
+        for(char c : _plain)
+            _cipher += c + _shift;
+    }
+
+    void Caesar2::decode()
+    {
+        _plain = "";
+        for(char c : _cipher)
+            _plain += c - _shift;
+    }
 }
